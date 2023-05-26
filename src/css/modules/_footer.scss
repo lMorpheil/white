@@ -1,0 +1,54 @@
+.footer {
+  @include font(SuisseIntl-l);
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 27px;
+  padding-bottom: 24px;
+  text-align: right;
+}
+
+.footer__link {
+  color: $footer_tect_color;
+  
+  &:not(:first-child) {
+    margin-left: 44px;
+  }
+}
+
+.footer__mail {
+  color: $footer_text_color_dark;
+}
+
+@media screen and (max-width: 1360px) {
+  
+  .footer {
+    font-size: 15px;
+    line-height: 20px;
+    padding-top: 29px;
+    padding-bottom: 15px;
+  }
+  
+  .footer__link {
+    
+    &:not(:first-child) {
+      margin-left: 37px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .footer {
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 25px;
+    padding-bottom: 16px;
+  }
+  
+  .footer__link {
+    
+    &:not(:first-child) {
+      margin-left: 23px;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+html {
+  @include font();
+  font-size: 16px;
+  color: $common_color;
+  margin-right: 0 !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  line-height: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bg {
+  background-image: url('~img/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.row {
+  max-width: 1330px;
+  padding: 0 25px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+.row_large {
+  max-width: 1832px;
+  padding-right: 63px;
+}
+
+@media screen and (max-width: 1360px) {
+  
+  .row_large {
+    padding-right: 27%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .row {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}

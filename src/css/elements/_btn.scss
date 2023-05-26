@@ -1,0 +1,80 @@
+.btn {
+  @include font(SuisseIntl);
+  border-radius: 35px;
+  background-image: $btn_bg_gradient;
+  box-shadow: $btn_bg_shadow;
+  padding: 23px 64px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-shadow: $btn_text_shadow;
+  color: $btn_color;
+  letter-spacing: 2px;
+  transition: all .2s ease;
+  
+  &:hover {
+    background-image: $btn_bg_gradient_hover;
+    box-shadow: $btn_bg_shadow_hover;
+    transition: all .2s ease;
+  }
+  
+  &:active {
+    background-image: $btn_bg_gradient_active;
+    box-shadow: $btn_bg_shadow_active;
+    transition: all .2s ease;
+  }
+}
+
+.btn__text_hidden {
+  display: none;
+}
+
+.btn__image {
+  display: none;
+}
+
+@media screen and (max-width: 1360px){
+  
+  .btn {
+    border-radius: 26px;
+    padding: 16px 35px;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 1.5px;
+  }
+  
+  .btn__text_showed {
+    display: none;
+  }
+  
+  .btn__text_hidden {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px){
+  
+  .btn {
+    position: relative;
+    max-width: 211px;
+    border-radius: 35px;
+    padding: 15px 61px 17px 0;
+    overflow: hidden;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: -29px;
+      right: -41px;
+      width: 135px;
+      height: 92px;
+      background-image: url('~img/btn-catalog.png');
+      background-size: 100% auto;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

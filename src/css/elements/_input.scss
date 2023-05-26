@@ -1,0 +1,23 @@
+.input {
+  display: block;
+  width: 100%;
+  border: 1px solid $input_border_color;
+  border-radius: 54px;
+  min-height: 110px;
+  padding: 0 7px;
+}
+
+@media screen and (max-width: 1360px){
+  .input {
+    min-height: 78px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  
+  .input {
+    border-radius: 35px;
+    min-height: 68px;
+    padding: 0 7px;
+  }
+}

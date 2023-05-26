@@ -1,0 +1,234 @@
+.first-screen {
+  padding-top: 62px;
+}
+
+.first-screen__wrapper {
+  padding-left: 70px;
+}
+
+.first-screen__title {
+  position: relative;
+  max-width: 1000px;
+}
+
+.first-screen__tablet {
+  @include font();
+  display: block;
+  position: absolute;
+  right: 259px;
+  bottom: 31px;
+  max-width: 281px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 18px 16px 27px 22px;
+  font-size: 32px;
+  transform: rotate(-8deg);
+  line-height: 40px;
+  color: $first-screen_tablet_text_color;
+  background-image: $first-screen_tablet_bg_gradient;
+  box-shadow: $first-screen_tablet_shadow;
+  text-shadow: -1.5px 2.598px 5px rgba(112, 83, 11, 0.24);
+  font-variant-numeric: tabular-nums;
+  
+  span {
+    display: block;
+    transform: skew(-11deg);
+  }
+}
+
+.first-screen__action {
+  background-color: $first-screen_bg_box;
+  border-radius: 80px;
+  max-width: 932px;
+  margin-top: 76px;
+  padding: 44px 20px 57px 67px;
+  box-shadow: $firs-screen_block_shadow;
+  overflow: hidden;
+}
+
+.first-screen__action-wrapper {
+  display: flex;
+  margin-right: -40px;
+  margin-left: -40px;
+  
+  > * {
+    flex: 1 0 calc(50% - 80px);
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+}
+
+.first-screen__action-title {
+  @include font(SuisseIntl-l);
+  font-size: 35px;
+  line-height: 50px;
+  padding-left: 10px;
+  letter-spacing: -0.2px;
+  
+  strong {
+    @include font(SuisseIntl-b);
+  }
+}
+
+.first-screen__input {
+  display: none;
+}
+.first-screen__btn {
+  margin-top: 38px;
+}
+
+.first-screen__list {
+  position: relative;
+  margin-left: 0;
+  margin-top: 5px;
+}
+
+.first-screen__update {
+  @include font(SuisseIntl-i);
+  margin-top: 36px;
+  font-size: 18px;
+  line-height: 25px;
+  color: $first-screen_accent_color;
+  
+  > span {
+    @include font(SuisseIntl-bi);
+  }
+}
+
+.first-screen__image {
+  position: absolute;
+  max-width: 663px;
+  bottom: -139px;
+  right: -115px;
+}
+
+@media screen and (max-width: 1360px) {
+  
+  .first-screen {
+    padding-top: 62px;
+  }
+  
+  .first-screen__wrapper {
+    padding-left: 118px;
+  }
+  
+  .first-screen__title {
+    max-width: 424px;
+  }
+  
+  .first-screen__tablet {
+    right: 9px;
+    bottom: 15px;
+    padding: 11px 6px 15px 14px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  
+  .first-screen__action {
+    border-radius: 30px;
+    max-width: 722px;
+    margin-top: 85px;
+    padding: 32px 27px 41px 112px;
+  }
+  
+  .first-screen__action-wrapper {
+    margin-right: -29px;
+    margin-left: -29px;
+    
+    > * {
+      flex: 1 0 calc(50% - 58px);
+      margin-right: 29px;
+      margin-left: 29px;
+    }
+  }
+  
+  .first-screen__action-title {
+    font-size: 25px;
+    line-height: 35px;
+    padding-left: 6px;
+  }
+  
+  .first-screen__btn {
+    margin-top: 24px;
+  }
+  
+  .first-screen__list {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  
+  .first-screen__update {
+    margin-top: 25px;
+    font-size: 13px;
+    line-height: 13px;
+  }
+  
+  .first-screen__image {
+    max-width: 465px;
+    bottom: -98px;
+    right: -106px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .first-screen {
+    padding-top: 47px;
+  }
+  
+  .first-screen__wrapper {
+    padding-left: 0;
+  }
+  
+  .first-screen__title {
+    font-size: 47px;
+    line-height: 50px;
+  }
+  
+  .first-screen__tablet {
+    right: 29px;
+    bottom: 11px;
+    padding: 8px 6px 12px 7px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  
+  .first-screen__action {
+    max-width: calc(100% - 54px);
+    text-align: center;
+    margin-top: 52px;
+    padding-top: 34px;
+    padding-left: 26px;
+    padding-bottom: 39px;
+  }
+  
+  .first-screen__action-wrapper {
+    margin-right: 0;
+    margin-left: 0;
+    
+    > * {
+      flex: 1 0 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  
+  .first-screen__action-title {
+    font-size: 22px;
+    line-height: 27px;
+    padding-left: 0;
+  }
+  
+  .first-screen__input {
+    display: inline;
+    margin-top: 22px;
+  }
+  
+  .first-screen__btn {
+    margin-top: 14px;
+  }
+  
+  .first-screen__list {
+    display: none;
+  }
+}

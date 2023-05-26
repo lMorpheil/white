@@ -1,0 +1,55 @@
+.switcher {
+  border: 1px solid $switcher_border_color;
+  border-radius: 10px;
+  padding: 6px 10px;
+  vertical-align: middle;
+}
+
+.switcher__input {
+  display: none;
+  opacity: 0;
+  
+  &:checked {
+    
+    +.switcher__text {
+      color: inherit;
+    }
+  }
+}
+
+.switcher__text {
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: $switcher_text_checked_color;
+  cursor: pointer;
+}
+
+.switcher__delim {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+@media screen and (max-width: 1360px) {
+  
+  .switcher {
+    padding: 9px 13px;
+  }
+  
+  .switcher__delim {
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .switcher {
+    padding: 7px 9px;
+  }
+  
+  .switcher__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

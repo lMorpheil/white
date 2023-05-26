@@ -1,0 +1,35 @@
+/***          ШРИФТЫ          ***/
+@import "fonts";
+
+/***      СТИЛИ ПЛАГИНОВ      ***/
+@import "~magnific-popup/dist/magnific-popup.css";
+
+/***        ПЕРЕМЕННЫЕ        ***/
+@import "vars";
+
+/***      ОСНОВНЫЕ СТИЛИ      ***/
+// Сброс
+@import "common/reset";
+// Миксины
+@import "common/mixins";
+// Общие
+@import "common/common";
+
+/***        Элементы          ***/
+@import "elements/switcher";
+@import 'elements/link';
+@import 'elements/title';
+@import 'elements/btn';
+@import 'elements/list';
+@import 'elements/form';
+@import 'elements/input';
+
+/***     ПЛАГИНЫ (модули)     ***/
+// Хедер
+@import "modules/header";
+// Секция главного экрана
+@import "modules/first-screen";
+// Футер
+@import "modules/footer";
+// Модалки
+@import "modules/modals";

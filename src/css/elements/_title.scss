@@ -1,0 +1,23 @@
+.title {
+  @include font(PlayfairDisplay-b);
+  font-size: 102px;
+  line-height: 108px;
+}
+
+.title__gradient {
+  display:inline-block;
+  color: #074a86;
+}
+
+.title__digit {
+  @include font(PlayfairDisplay);
+  font-variant-numeric: lining-nums;
+}
+
+@media screen and (max-width: 1360px) {
+  
+  .title {
+    font-size: 56px;
+    line-height: 59px;
+  }
+}

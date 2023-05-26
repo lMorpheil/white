@@ -1,0 +1,122 @@
+// Простой миксин для флекса
+@mixin flex($width, $margin: null, $padding: null, $wrap: null, $grow: 0) {
+  justify-content: flex-start;
+  
+  @if $margin {
+    margin-left: -$margin;
+    margin-right: -$margin;
+  }
+  
+  @if $wrap {
+    flex-wrap: $wrap;
+  } @else {
+    flex-wrap: wrap;
+  }
+  
+  display: flex;
+  
+  & > * {
+    @if $padding {
+      padding-left: $padding;
+      padding-right: $padding;
+    } @else if $margin {
+      margin-left: $margin;
+      margin-right: $margin;
+    }
+    
+    @if $grow {
+      flex: $grow 1 $width;
+    } @else {
+      flex: 0 1 $width;
+    }
+  }
+}
+
+// Сброс стиля для IE
+@mixin initial($property) {
+  #{$property}: inherit !important;
+  #{$property}: initial !important;
+}
+
+// Выравнивание по центру
+@mixin flex-middle {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  
+  &::after {
+    content: '';
+    min-height: inherit;
+    font-size: 0;
+  }
+}
+
+// Выравнивание по вертикали
+@mixin flex-vertical {
+  display: flex;
+  align-items: center;
+}
+
+// Центрированный флекс
+@mixin flex-horizontal() {
+  justify-content: center;
+  display: flex;
+  
+  &::after {
+    content: '';
+    min-height: inherit;
+    font-size: 0;
+  }
+}
+
+@mixin background-params($repeat: no-repeat, $size: contain, $position: center center) {
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: $position;
+}
+
+// Шрифты
+@mixin font($font: SuisseIntl) {
+  
+  @if $font == SuisseIntl-l {
+    font-family: "SuisseIntl", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @if $font == SuisseIntl {
+    font-family: "SuisseIntl", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @if $font == SuisseIntl-i {
+    font-family: "SuisseIntl", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @if $font == SuisseIntl-b {
+    font-family: "SuisseIntl", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @if $font == SuisseIntl-bi {
+    font-family: "SuisseIntl", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  @if $font == PlayfairDisplay {
+    font-family: "PlayfairDisplay", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @if $font == PlayfairDisplay-b {
+    font-family: "PlayfairDisplay", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+}

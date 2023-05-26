@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    >
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <div class="bg content">
+        <header class="header">
+            <div class="row">
+                <div class="header__grid">
+                    <a class="header__logo" href="/">
+                        <img src="<%=require('./assets/images/logo.png')%>" alt="логотип Whitewill">
+                    </a>
+                    <div class="header__address">
+                        <span>23 King Street</span> <span>London SW1Y 6QY</span>
+                    </div>
+                    <div class="header__phone">
+                        <a class="header__number" href="tel:442080899006">44 20 8089 9006</a>
+                        <a class="link link_underline header__callback" href="javascript:void(0)" data-js="popup" data-js-popup="mod"><span>Перезвонить вам?</span></a>
+                    </div>
+                    <div class="switcher header__switcher">
+                        <label class="switcher__btn">
+                            <input class="switcher__input" type="radio" name="language">
+                            <span class="switcher__text">EN</span>
+                        </label>
+                        <span class="switcher__delim">|</span>
+                        <label class="switcher__btn">
+                            <input class="switcher__input" type="radio" name="language" checked>
+                            <span class="switcher__text">RU</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <section class="first-screen">
+            <div class="row">
+                <div class="first-screen__wrapper">
+                    <h1 class="title first-screen__title">
+                        <span class="title__gradient"><span class="title__digit">110</span> лучших новостроек Лондона</span>
+                        <span class="first-screen__tablet"><span>от<br> 33&ensp;500&ensp;000&ensp;₽</span></span>
+                    </h1>
+                </div>
+                <div class="first-screen__action">
+                    <div class="first-screen__action-wrapper">
+                        <div class="first-screen__btn-block">
+                            <div class="first-screen__action-title">
+                                <strong>Скачайте</strong> каталог элитных новостроек в&nbsp;центре Лондона
+                            </div>
+                            <input class="input first-screen__input" >
+                            <button class="btn first-screen__btn" type="button">
+                                <span class="btn__text_showed">Скачать каталог</span>
+                                <span class="btn__text_hidden">Скачайте каталог</span>
+                            </button>
+                        </div>
+                        <div class="first-screen__list">
+                            <ul class="list">
+                                <li class="list__item">158 комплексов с апартаментами</li>
+                                <li class="list__item">45 клубных домов в Сити</li>
+                                <li class="list__item">164 комплекса с пентхаусами</li>
+                                <li class="list__item">200 комплексов для инвестиций</li>
+                            </ul>
+                            <div class="first-screen__update">Обновлен <span class="">5 марта 2020</span></div>
+                            <img class="first-screen__image" src="<%=require('./assets/images/catalog.png')%>" alt="каталог с недвижимостью">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <div class="row row_large">
+                <a class="link footer__link link_underline" href="javascript:void(0)"><span>Privacy Policy</span></a>
+                <a class="link footer__link link_underline" href="javascript:void(0)"><span>Cookie Policy</span></a>
+                <a class="link footer__link footer_mail" href="mailto:Info@whitewill.ru">Info@whitewill.ru</a>
+            </div>
+        </footer>
+        
+        <aside class="modal" id="mod" data-effect="mfp-zoom-in">
+            <div class="modal__grid">
+                <div class="modal__img">
+                    <img src="<%=require('./assets/images/modal-img.png')%>" alt="Каталог">
+                </div>
+                <form class="form modal__form" action="" >
+                    <div class="modal__title">
+                        <strong>Скачайте</strong> актуальный каталог объектов недвижимости в Лондоне
+                    </div>
+                    <div class="form__group">
+                        <label class="form__input">
+                            <input type="text" class="input">
+                        </label>
+                        <div class="form__btn">
+                            <button class="btn form__btn-item">скачать каталог</button>
+                        </div>
+                        <label class="form__policy">
+                            <input class="form__checkbox" type="checkbox" name="policy">
+                            <span>
+                                Я ознакомился и соглашаюсь с <a href="javascript:void(0)" class="link link_underline"><span>условиями обработки данных</span> и <span>политикой конфиденциальности</span></a>
+                            </span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
