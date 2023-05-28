@@ -2,7 +2,6 @@ html {
   @include font();
   font-size: 16px;
   color: $common_color;
-  margin-right: 0 !important;
 }
 
 * {
@@ -20,11 +19,20 @@ img {
   height: auto;
 }
 
+.content {
+  position: relative;
+  min-height: 100vh;
+}
+
 .bg {
   background-image: url('~img/bg.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg_alternate {
+  background-image: url('~img/bg-heart.png');
 }
 
 .row {
@@ -37,9 +45,24 @@ img {
 .row_large {
   max-width: 1832px;
   padding-right: 63px;
+  padding-left: 75px;
 }
 
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1363px) {
+  
+  .bg {
+    background-image: url('~img/bg-little.png');
+    background-position: top left;
+  }
+  
+  .bg_alternate {
+    background-image: url('~img/bg-heart-little.png');
+    background-position: center;
+  }
+  
+  .row {
+    padding-left: 91px;
+  }
   
   .row_large {
     padding-right: 27%;
@@ -48,8 +71,14 @@ img {
 
 @media screen and (max-width: 768px) {
   
+  .bg_alternate {
+    background-image: url('~img/bg-heart-mobile.png'), $success_bg_gradient;
+    background-position: center, center;
+    background-size: 100% auto, cover;
+  }
+  
   .row {
-    padding-right: 32px;
-    padding-left: 32px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }

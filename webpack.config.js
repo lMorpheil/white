@@ -4,6 +4,7 @@ const HtmlWebpackPlugin    = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const Path                 = require('path');
 const fs = require('fs');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const getFiles = function (dir, files_){
     files_ = files_ || [];
@@ -19,17 +20,17 @@ const getFiles = function (dir, files_){
     return files_;
 };
 
-const pathSrc = path.resolve(__dirname, 'src');
+const pathSrc = path.resolve(__dirname, 'src/pages');
 const pages = getFiles(pathSrc).filter((item) => path.extname(item) === '.html');
 
 module.exports = {
     entry: {
-        main: path.resolve(__dirname, './src/index.js'),
+        main: path.resolve(__dirname, './src/pages/index.js'),
     },
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].bundle.js',
-        assetModuleFilename: path.join('./assets/images', '[name].[contenthash][ext]'),
+        assetModuleFilename: 'assets/images/[hash][ext][query]',
     },
     resolve: {
         alias: {
@@ -54,11 +55,7 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        // {
-        //     'postcss-preset-env': {
-        //         browsers: 'last 2 versions',
-        //     },
-        // },
+        new MiniCssExtractPlugin(),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
@@ -82,7 +79,12 @@ module.exports = {
             {
                 test: /\.(scss|css)$/,
                 use: [
-                    'style-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                        
+                        },
+                    },
                     'css-loader',
                     {
                         loader: 'postcss-loader',

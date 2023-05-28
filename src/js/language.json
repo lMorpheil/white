@@ -1,0 +1,33 @@
+{
+    "page": {
+        "main" : {
+            "header" : {
+              "callback": {
+                "ru": "Перезвонить вам?",
+                "en": "Call You Back?"
+              }
+            },
+            "first-screen" : {
+              "title": {},
+              "price": {},
+              "subtitle": {},
+            },
+            "footer" : "",
+            "modal":{
+                "title": {
+                    "ru": "<strong>Скачайте</strong> актуальный каталог объектов недвижимости в Лондоне",
+                    "en": "<strong>Download</strong> The Current Catalogue of New Development in London<strong>"
+         },
+                "button-text": {
+                    "ru": "скачать каталог",
+                    "en": "download brochure"
+                },
+                "policy": {
+                    "ru": "Я ознакомился и соглашаюсь с <a href=\"javascript:void(0)\" class=\"link link_underline\"><span>условиями обработки данных</span> и <span>политикой конфиденциальности</span></a>",
+                    "en": "I have read and agree to the <a href=\"javascript:void(0)\" class=\"link link_underline\"><span>terms of data processing</span> and <span>privacy policy</span></a>"
+                }
+            }
+        },
+        "success": ""
+}
+}

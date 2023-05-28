@@ -1,9 +1,11 @@
 .btn {
   @include font(SuisseIntl);
+  display: block;
+  width: 100%;
   border-radius: 35px;
   background-image: $btn_bg_gradient;
   box-shadow: $btn_bg_shadow;
-  padding: 23px 64px;
+  padding: 23px 10px;
   border: none;
   text-transform: uppercase;
   font-size: 20px;
@@ -12,18 +14,64 @@
   text-shadow: $btn_text_shadow;
   color: $btn_color;
   letter-spacing: 2px;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   
   &:hover {
     background-image: $btn_bg_gradient_hover;
     box-shadow: $btn_bg_shadow_hover;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
   }
   
   &:active {
     background-image: $btn_bg_gradient_active;
     box-shadow: $btn_bg_shadow_active;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
+  }
+}
+
+.btn_small {
+  min-height: 51px;
+  font-size: 20px;
+  line-height: 28px;
+  max-width: 343px;
+}
+
+.btn_back {
+  @include flex-middle;
+  text-transform: capitalize;
+  min-height: 90px;
+  max-width: 228px;
+  width: 100%;
+  border-radius: 45px;
+  font-size: 30px;
+  line-height: normal;
+  padding: 0 10px;
+  background: #fff;
+  color: #585858;
+  text-shadow: none;
+  box-shadow: none;
+  
+  &::before {
+    content: '';
+    display: block;
+    width: 19px;
+    height: 27px;
+    flex-grow: 0;
+    margin-right: 10px;
+    background-image: url('~img/arrow.svg');
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  &:hover {
+    background: #dcd6d6;
+    box-shadow: 2px 2px #222;
+  }
+  
+  &:active {
+    background: #fff;
+    box-shadow: 2px 2px #b6b4b4;
   }
 }
 
@@ -35,7 +83,7 @@
   display: none;
 }
 
-@media screen and (max-width: 1360px){
+@media screen and (max-width: 1363px){
   
   .btn {
     border-radius: 26px;
@@ -43,6 +91,29 @@
     font-size: 15px;
     line-height: 19px;
     letter-spacing: 1.5px;
+  }
+  
+  .btn_small {
+    max-width: 245px;
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+  
+  .btn_back {
+    min-height: 60px;
+    max-width: 154px;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 0 10px;
+    text-shadow: none;
+    box-shadow: none;
+    
+    &::before {
+      width: 19px;
+      height: 27px;
+      flex-grow: 0;
+      margin-right: 10px;
+    }
   }
   
   .btn__text_showed {
@@ -63,6 +134,7 @@
     padding: 15px 61px 17px 0;
     overflow: hidden;
     
+    
     &::after {
       content: '';
       position: absolute;
@@ -75,6 +147,26 @@
       background-size: 100% auto;
       background-position: center;
       background-repeat: no-repeat;
+    }
+  }
+  
+  .btn_back {
+    min-height: 56px;
+    max-width: 143px;
+    border-radius: 28px;
+    font-size: 19px;
+    padding: 0 10px;
+    text-shadow: none;
+    box-shadow: none;
+    
+    &::before {
+      width: 19px;
+      height: 27px;
+      margin-right: 3px;
+    }
+    
+    &::after {
+      display: none;
     }
   }
 }

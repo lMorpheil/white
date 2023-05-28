@@ -1,15 +1,19 @@
 window.jQuery = window.$ = require('jquery');
 
+import '../css/style.scss';
+
 //Плагины
 import 'magnific-popup';
-import Modal from './js/Modal';
-import './css/style.scss';
+//Модули
+import Modal        from '../js/Modal';
+import Form         from '../js/Form';
+import SwapLanguage from '../js/SwapLanguage';
 
 class App {
     constructor() {
-        let modal = new Modal();
-        modal._init();
-        modal._bind();
+        new Modal();
+        new Form();
+        new SwapLanguage();
     }
 }
 

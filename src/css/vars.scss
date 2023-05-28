@@ -3,11 +3,15 @@ $common_color: #585858;
 $header_text_color: #fff;
 $header_link_color: rgba(7, 74, 134, 0.5);
 
+$title_gradient_color: #074a86;
+$title_gradient: #fff;
+$title_light_color: #fff;
+
 $switcher_text_checked_color: #dce6ef;
 $switcher_border_color: #fff;
 
 $first-screen_tablet_bg_gradient: linear-gradient( 60deg, rgb(225,161,0) 0%, rgb(255,183,0) 100%);
-$first-screen_tablet_shadow: -11px 19.053px 35px 0 rgba(255, 183, 0, 0.4);
+$first-screen_tablet_shadow: -11px 19px 35px 0 rgba(255, 183, 0, 0.4);
 $first-screen_tablet_text_color: #fff;
 $first-screen_bg_box: #fff;
 $firs-screen_block_shadow: 0 15px 54px 0 rgba(117, 146, 173, 0.26);
@@ -30,3 +34,8 @@ $footer_text_color_dark: #585858;
 $input_border_color: #ffc000;
 
 $modal_bg_color: #fff;
+
+$success_bg_gradient: linear-gradient( 50deg, rgb(172,203,238) 0%, rgb(231,240,253) 100%);
+$success_text_color: #fff;
+
+$input_phone_color: #dcdcdc;

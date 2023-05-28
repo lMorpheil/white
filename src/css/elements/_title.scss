@@ -4,9 +4,27 @@
   line-height: 108px;
 }
 
+.title_light {
+  @include font(sfui-b);
+  font-size: 96px;
+  text-align: center;
+  line-height: 108px;
+  letter-spacing: 2.5px;
+  color: $title_light_color;
+}
+
 .title__gradient {
   display:inline-block;
-  color: #074a86;
+  color: $title_gradient_color;
+  background-image: linear-gradient(to right, #074a86 0%, #7b9ebe 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    background-image: none;
+  }
 }
 
 .title__digit {
@@ -14,10 +32,19 @@
   font-variant-numeric: lining-nums;
 }
 
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1363px) {
   
   .title {
     font-size: 56px;
     line-height: 59px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .title_light {
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: 0.5px;
   }
 }

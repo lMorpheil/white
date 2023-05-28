@@ -4,7 +4,7 @@
 }
 
 .mfp-content .mfp-close {
-  display: none;
+
 }
 
 .mfp-content .modal {
@@ -52,6 +52,7 @@
   
   strong {
     @include font(SuisseIntl-b);
+    color: #000;
   }
 }
 
@@ -69,7 +70,7 @@
   }
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1363px){
   
   .mfp-content {
     padding-bottom: 35px;
@@ -98,5 +99,23 @@
       left: -39%;
       min-width: 963px;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .modal__form {
+    flex: 1 0 100%;
+    padding: 20px;
+    min-height: initial;
+  }
+  
+  .modal__title {
+    font-size: 21px;
+    line-height: 27px;
+  }
+  
+  .modal__img {
+    display: none;
   }
 }

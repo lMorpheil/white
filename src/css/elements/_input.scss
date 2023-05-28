@@ -1,15 +1,29 @@
 .input {
+  @include font(SuisseIntl-l);
   display: block;
   width: 100%;
   border: 1px solid $input_border_color;
   border-radius: 54px;
   min-height: 110px;
-  padding: 0 7px;
+  padding-right: 20px;
+  padding-left: 175px;
+  background-image: url('~img/phone.png');
+  background-position: 109px center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  font-size: 31px;
+  line-height: 31px;
+  letter-spacing: 0.5px;
+  color: $input_phone_color;
 }
 
-@media screen and (max-width: 1360px){
+@media screen and (max-width: 1363px){
+  
   .input {
     min-height: 78px;
+    padding-left: 120px;
+    background-size: 26px auto;
+    background-position: 80px center;
   }
 }
 
@@ -18,6 +32,14 @@
   .input {
     border-radius: 35px;
     min-height: 68px;
-    padding: 0 7px;
+    font-size: 16px;
+    line-height: 16px;
+    padding-left: 66px;
+    background-position: 33px center;
+    background-size: 18px 18px;
+    .input__placeholder {
+      top: 0;
+      left: 10px;
+    }
   }
 }

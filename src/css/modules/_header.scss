@@ -50,7 +50,7 @@
   margin-left: 35px;
 }
 
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1363px) {
   
   .header {
     padding-top: 67px;
@@ -61,7 +61,7 @@
   .header__grid {
     margin-right: -20px;
     margin-left: -20px;
-    padding-left: 120px;
+    padding-left: 52px;
     
     > * {
       margin-right: 20px;
@@ -105,7 +105,15 @@
   }
   
   .header__grid {
-    padding-left: 0;
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-right: 0;
+    margin-left: 0;
+    
+    > * {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
   
   .header__logo {
@@ -116,12 +124,21 @@
     display: none;
   }
   
+  .header__phone {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
   .header__number {
     font-size: 16px;
     line-height: 16px;
   }
+}
+
+@media screen and (max-width: 360px) {
   
-  .header__switcher {
-    margin-right: 21px;
+  .header__grid {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    >
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<div class="content bg" data-js="content">
+    <header class="header" data-js-item="header">
+        <div class="row">
+            <div class="header__grid">
+                <div class="header__logo">
+                    <img src="<%=require('../assets/images/logo.png')%>" alt="логотип Whitewill">
+                </div>
+                <div class="header__address">
+                    <span>23 King Street</span> <span>London SW1Y 6QY</span>
+                </div>
+                <div class="header__phone">
+                    <a class="header__number" href="tel:442080899006">44 20 8089 9006</a>
+                    <a class="link link_underline header__callback" href="javascript:void(0)" data-js="popup" data-js-popup="mod"><span>Call You Back?</span></a>
+                </div>
+                <div class="switcher header__switcher" data-js="lang-switcher">
+                    <label class="switcher__btn">
+                        <input class="switcher__input" type="radio" name="language" value="en">
+                        <span class="switcher__text">EN</span>
+                    </label>
+                    <span class="switcher__delim">|</span>
+                    <label class="switcher__btn">
+                        <input class="switcher__input" type="radio" name="language" value="ru" checked>
+                        <span class="switcher__text">RU</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="first-screen" data-js-item="first-screen">
+        <div class="row">
+            <div class="first-screen__wrapper">
+                <h1 class="title first-screen__title">
+                    <span class="title__gradient"><span class="title__digit">110</span> Best New Developments in&nbsp;London</span>
+                    <span class="first-screen__tablet"><span>from<br> £400.000</span></span>
+                </h1>
+            </div>
+            <div class="first-screen__action">
+                <div class="first-screen__action-wrapper">
+                    <div class="first-screen__btn-block">
+                        <div class="first-screen__action-title">
+                            <strong>Download</strong> Catalogue of&nbsp;New Developments in&nbsp;Central London
+                        </div>
+                        <form class="form first-screen__form" method="post" action="" data-js="ajax-form">
+                            <label class="form__input required first-screen__input">
+                                <input class="input input_small input_phone" type="tel" data-inputmask="'mask': '99 99 9999 9999'">
+                                <span class="form__placeholder">44 20 8089 9006</span>
+                            </label>
+                            <button class="btn btn_small first-screen__btn" type="submit">
+                                <span class="btn__text_showed">Download Brochure</span>
+                                <span class="btn__text_hidden">Download Brochure</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="first-screen__list">
+                        <ul class="list">
+                            <li class="list__item">158 condos with apartments</li>
+                            <li class="list__item">45 private houses in City</li>
+                            <li class="list__item">164 condos with penthhouses</li>
+                            <li class="list__item">200 condos for investments</li>
+                        </ul>
+                        <div class="first-screen__update showed">date on <span class="">March, 5 2020</span></div>
+                        <div class="first-screen__update hidden">date on <span class="">March, 5 2020</span></div>
+                        <img class="first-screen__image" src="<%=require('../assets/images/catalog.png')%>" alt="каталог с недвижимостью">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer" data-js-item="footer">
+        <div class="row row_large">
+            <a class="link footer__link link_underline" href="javascript:void(0)"><span>Privacy Policy</span></a>
+            <a class="link footer__link link_underline" href="javascript:void(0)"><span>Cookie Policy</span></a>
+            <a class="link footer__link footer__mail" href="mailto:Info@whitewill.ru">Info@whitewill.ru</a>
+        </div>
+    </footer>
+    
+    <aside class="modal" id="mod" data-js-item="modal" data-effect="mfp-zoom-in">
+        <div class="modal__grid">
+            <div class="modal__img">
+                <img src="<%=require('../assets/images/modal-img.png')%>" alt="Каталог">
+            </div>
+            <form class="form modal__form" method="post" action="" data-js="ajax-form">
+                <div class="modal__title">
+                    <strong>Download</strong> The Current Catalogue of&nbsp;New Development in&nbsp;London
+                </div>
+                <div class="form__group">
+                    <label class="form__input required">
+                        <input class="input input_phone" type="tel" data-inputmask="'mask': '99 99 9999 9999'">
+                        <span class="form__placeholder">44 20 8089 9006</span>
+                    </label>
+                    <div class="form__btn">
+                        <button class="btn form__btn-item" type="submit">download Brochure</button>
+                    </div>
+                    <label class="form__policy">
+                        <input class="form__checkbox" type="checkbox" name="policy">
+                        <span>
+                                I have read and agree to the <a href="javascript:void(0)" class="link link_underline"><span>terms of data processing</span> and <span>privacy policy</span></a>
+                            </span>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </aside>
+</div>
+</body>
+</html>

@@ -19,7 +19,7 @@
   color: $footer_text_color_dark;
 }
 
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1363px) {
   
   .footer {
     font-size: 15px;
@@ -49,6 +49,20 @@
     
     &:not(:first-child) {
       margin-left: 23px;
+    }
+  }
+  
+  .footer__mail {
+    margin-right: 20px;
+  }
+}
+
+@media screen and  (max-width: 350px) {
+  
+  .footer__link {
+    
+    &:not(:first-child) {
+      margin-left: 10px;
     }
   }
 }

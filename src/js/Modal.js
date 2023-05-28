@@ -1,4 +1,6 @@
-export default class Popups {
+import Base from './_base-controller';
+
+export default class Popups extends Base {
     
     _init() {
         
